@@ -27,13 +27,9 @@
   --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --body: "Figtree", "Segoe UI", system-ui, sans-serif;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #11162A; --surface: #182040; --ink: #EEF1F8; --muted: #A9B2CC; --mist: #222C52; --line: #2E3A66;
-  --accent: #E39A55; --accent-ink: #1A1206; --note-bg: #2D2414; --note-ink: #F2C894; color-scheme: dark } }
-:root[data-theme="dark"] {
-  --bg: #11162A; --surface: #182040; --ink: #EEF1F8; --muted: #A9B2CC; --mist: #222C52; --line: #2E3A66;
-  --accent: #E39A55; --accent-ink: #1A1206; --note-bg: #2D2414; --note-ink: #F2C894; color-scheme: dark }
 
+/* Tema único claro (decisión de Gerardo, 1-nov-2026). */
+:root { color-scheme: light; }
 body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; }
 .wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
@@ -49,9 +45,6 @@ a { color: inherit; }
 .ship .wrap { padding-block: 8px; }
 header .wrap { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; }
 header img { height: 30px; width: auto; }
-:root[data-theme="dark"] header img, .logo-dark-fix { }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) header img { filter: invert(1); } }
-:root[data-theme="dark"] header img { filter: invert(1); }
 header nav { display: flex; gap: 18px; font-size: .9rem; color: var(--muted); }
 
 .hero .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; padding-block: 24px 48px; }
