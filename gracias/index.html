@@ -16,9 +16,10 @@ h1{font-size:1.8rem;margin:0}p{margin:0;color:#5A6480;line-height:1.55}hr{border
 <p lang="es">Recibimos tu pago. Te escribiremos cuando tu pedido salga, con el número de seguimiento. Dudas: info@eme-usa.shop</p>
 </main>
 <script>(function(){var q=new URLSearchParams(location.search),s=q.get('session_id')||'';var k='eme_purchase_'+s;
-var T={"15": {"id": "ficha-15", "precio": 99.99}, "104": {"id": "ficha-104", "precio": 269.99}, "110": {"id": "ficha-110", "precio": 299.99}},x=T[q.get('p')]||T['15'];
-try{if(s&&sessionStorage.getItem(k))return;}catch(e){}
+var T={"15": {"id": "ficha-15", "precio": 99.99}, "104": {"id": "ficha-104", "precio": 269.99}, "110": {"id": "ficha-110", "precio": 299.99}},x=T[q.get('p')||'15'];
+if(!x||s.indexOf('cs_')!==0)return;
+try{if(sessionStorage.getItem(k))return;}catch(e){}
 if(window.fbq)fbq('track','Purchase',{value:x.precio,currency:'USD',content_ids:[x.id],content_type:'product'},{eventID:s});
 if(window.ttq)ttq.track('Purchase',{contents:[{content_id:x.id,content_type:'product'}],value:x.precio,currency:'USD'},{event_id:s});
-try{if(s)sessionStorage.setItem(k,'1');}catch(e){}})();</script>
+try{sessionStorage.setItem(k,'1');}catch(e){}})();</script>
 </body></html>
