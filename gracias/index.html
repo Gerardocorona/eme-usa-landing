@@ -17,7 +17,7 @@ h1{font-size:1.8rem;margin:0}p{margin:0;color:#5A6480;line-height:1.55}hr{border
 <p lang="es">Recibimos tu pago. Te escribiremos cuando tu pedido salga, con el número de seguimiento. Dudas: info@eme-usa.shop</p>
 </main>
 <script>(function(){var q=new URLSearchParams(location.search),s=q.get('session_id')||'';var k='eme_purchase_'+s;
-var T={"15": {"id": "ficha-15", "precio": 99.99}, "104": {"id": "ficha-104", "precio": 79.99}, "110": {"id": "ficha-110", "precio": 99.99}, "mavra-1": {"id": "mavra-1", "precio": 29.9}, "mavra-2": {"id": "mavra-2", "precio": 44.9}, "mavra-4": {"id": "mavra-4", "precio": 64.9}, "mavra-postura-2": {"id": "mavra-postura-2", "precio": 44.9}, "mavra-postura-4": {"id": "mavra-postura-4", "precio": 64.9}, "arnes-1": {"id": "arnes-1", "precio": 49.99}, "arnes-2": {"id": "arnes-2", "precio": 79.99}},x=T[q.get('p')||'15'];
+var T={"15": {"id": "ficha-15", "precio": 99.99}, "104": {"id": "ficha-104", "precio": 79.99}, "110": {"id": "ficha-110", "precio": 99.99}, "mavra-1": {"id": "mavra-1", "precio": 29.9}, "mavra-2": {"id": "mavra-2", "precio": 44.9}, "mavra-4": {"id": "mavra-4", "precio": 64.9}, "mavra-postura-2": {"id": "mavra-postura-2", "precio": 44.9}, "mavra-postura-4": {"id": "mavra-postura-4", "precio": 64.9}, "arnes-1": {"id": "arnes-1", "precio": 49.99}, "arnes-2": {"id": "arnes-2", "precio": 79.99}, "bolsas-3m": {"id": "bolsas-3m", "precio": 14.99}},x=T[q.get('p')||'15'];
 if(!x||s.indexOf('cs_')!==0)return;
 try{if(sessionStorage.getItem(k))return;}catch(e){}
 if(window.fbq)fbq('track','Purchase',{value:x.precio,currency:'USD',content_ids:[x.id],content_type:'product'},{eventID:s});
